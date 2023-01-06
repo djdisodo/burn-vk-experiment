@@ -1,0 +1,13 @@
+[package]
+name = "burn-vk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+vulkano = "0.32.3"
+burn = { path = "../burn/burn" }
+parking_lot = "0.12.1"
+vulkano-spirv-bind-macro = { path = "./vulkano-spirv-bind-macro" }
+bytemuck = "1.12.3"
