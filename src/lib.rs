@@ -1,6 +1,7 @@
 #![feature(once_cell)]
 #![feature(int_roundings)]
 
+use std::intrinsics::offset;
 use std::marker::PhantomData;
 use std::ops::Deref;
 use std::sync::{Arc, LazyLock};
@@ -156,7 +157,7 @@ impl VulkanDevice {
         DeviceOrCpuBuffer::Device(buffer)
     }
 
-    fn run(&self, pipeline: Arc<ComputePipeline>, args: impl IntoIterator<Item=Arc<dyn BufferAccess>>, dispatch: [u32; 3]) -> FenceSignalFuture<CommandBufferExecFuture<NowFuture>> {
+    fn run<T>(&self, pipeline: Arc<ComputePipeline>, args: impl IntoIterator<Item=Arc<dyn BufferAccess>>, dispatch: [u32; 3], constants: Option<T>) -> FenceSignalFuture<CommandBufferExecFuture<NowFuture>> {
         let set = PersistentDescriptorSet::new(
             &self.descriptor_set_allocator,
             pipeline.layout().set_layouts().get(0).unwrap().clone(),
@@ -172,11 +173,14 @@ impl VulkanDevice {
             .bind_pipeline_compute(pipeline)
             .bind_descriptor_sets(
                 PipelineBindPoint::Compute,
-                layout,
+                layout.clone(),
                 0,
                 set
-            )
-            .dispatch(dispatch).unwrap();
+            );
+        if let Some(constants) = constants {
+            builder.push_constants(layout, 0, constants)
+        }
+        builder.dispatch(dispatch).unwrap();
 
         let command_buffer = builder.build().unwrap();
         let future = sync::now(self.device.clone()).then_execute(self.queue.clone(), command_buffer)

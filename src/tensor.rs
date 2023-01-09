@@ -100,7 +100,12 @@ impl TensorOps<Self> for Vulkan<f32> {
         let output = lhs.device.new_buffer_raw();
         let pipeline = lhs.device.shader_module.add_f32.clone();
         let dispatch = vulkano::DeviceSize::div_ceil(lhs.buffer.len(), 64 * size_of::<f32>());
-        lhs.device.run(pipeline, [&lhs.buffer, &rhs.buffer, &output].map(|x| x.as_buffer_access().clone(), [dispatch as _, 0, 0]).wait(None).unwrap();
+        lhs.device.run(
+            pipeline,
+            [&lhs.buffer, &rhs.buffer, &output].map(|x| x.as_buffer_access().clone()),
+            [dispatch as _, 0, 0],
+            None
+        ).wait(None).unwrap();
         VulkanTensor {
             device: lhs.device.clone(),
             buffer: output,
