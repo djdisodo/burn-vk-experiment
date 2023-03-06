@@ -53,7 +53,7 @@ pub fn include_shader(tokens: proc_macro::TokenStream) -> proc_macro::TokenStrea
         } = x {
             let ident = Ident::new(name, input.path.span().clone());
             fields_ts.append_all(quote! {
-                pub #ident: std::sync::Arc<vulkano::shader::pipeline::ComputePipeline>,
+                pub #ident: std::sync::Arc<vulkano::pipeline::compute::ComputePipeline>,
             });
 
             fields_initialization.append_all(quote! {

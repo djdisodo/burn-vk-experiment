@@ -1,9 +1,10 @@
 [package]
-name = "shader_builder"
+name = "burn-vk-types"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-spirv-builder = { git = "https://github.com/EmbarkStudios/rust-gpu", features = ["use-compiled-tools"] }
+[target.'cfg(not(target_arch = "spirv"))'.dependencies]
+bytemuck = "1.13.0"
+bytemuck_derive = "1.4.0"

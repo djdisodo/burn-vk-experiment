@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "burn-vk",
+    "burn-vk-types",
+    "burn-vk-shader",
+	"vulkano-spirv-bind-macro",
+    "tools/shader_builder"
+]
