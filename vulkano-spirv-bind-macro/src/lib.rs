@@ -79,7 +79,7 @@ pub fn include_shader(tokens: proc_macro::TokenStream) -> proc_macro::TokenStrea
         impl #input_ident {
             pub fn load(device: std::sync::Arc<vulkano::device::Device>, cache: std::option::Option<std::sync::Arc<vulkano::pipeline::cache::PipelineCache>>) -> Self {
                 let shader_module = std::pin::Pin::new(unsafe {
-                    vulkano::shader::ShaderModule::from_bytes(device, include_bytes!(#input_path)).unwrap()
+                    vulkano::shader::ShaderModule::from_bytes(device.clone(), include_bytes!(#input_path)).unwrap()
                 });
                 Self {
                     #fields_initialization
