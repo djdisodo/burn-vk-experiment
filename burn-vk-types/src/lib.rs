@@ -60,11 +60,11 @@ impl<const N: usize> TensorShape<N> {
         }
     }
 
-    pub fn from_slice<T: Into<u32> + Copy>(slice: &[T]) -> Self {
+    pub fn from_slice(slice: &[u32]) -> Self {
         assert!(slice.len() <= N);
         let mut inner = [0; N];
         for (x, i) in slice.iter().zip(inner.iter_mut()) {
-            *i = (*x).into()
+            *i = *x
         }
         Self {
             data: inner,
