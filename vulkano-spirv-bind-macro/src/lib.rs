@@ -63,7 +63,7 @@ pub fn include_shader(tokens: proc_macro::TokenStream) -> proc_macro::TokenStrea
                     &(),
                     cache,
                     |_| ()
-                ),
+                ).unwrap(),
             })
         }
     }

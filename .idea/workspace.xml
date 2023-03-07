@@ -7,34 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6da7b404-eb22-496f-ba8e-9298d0545249" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/fp32/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/fp32/module.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/fp32/tensor.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/int64/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/int64/module.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/int64/tensor.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/burn-vk/src/backend/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/burn-vk.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader/Cargo.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader/shader.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader/src/lib.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader_builder/Cargo.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader_builder/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader_builder/rust-toolchain.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader_builder/src/main.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/device.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tensor.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vulkano-spirv-bind-macro/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/vulkano-spirv-bind-macro/src/lib.rs" afterDir="false" />
-    </list>
+    <list default="true" id="6da7b404-eb22-496f-ba8e-9298d0545249" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/PC/burn-vk/burn-vk/src/vk32/i32",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/burn-vk/burn-vk/src/vk32/i32&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\burn-vk\burn-vk\src\vk32\i32" />
